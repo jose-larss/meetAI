@@ -1,41 +1,99 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+############################################
+# GLOBAL
+############################################
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# IDEs / Editores
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# Sistema Operativo
 .DS_Store
-*.pem
+Thumbs.db
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+############################################
+# FRONTEND (Next.js)
+############################################
 
-# vercel
-.vercel
+# Dependencias
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.*
+frontend/.yarn/*
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/versions
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Testing
+frontend/coverage/
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Variables de entorno
+frontend/.env*
+!frontend/.env.example
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+
+# Vercel
+frontend/.vercel/
+
+# TypeScript
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# Misc
+frontend/*.pem
+
+
+############################################
+# BACKEND (Python / Django)
+############################################
+
+# Python cache
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+backend/*.so
+
+# Entornos virtuales
+backend/.Python
+backend/env/
+backend/venv/
+backend/ENV/
+backend/env.bak/
+backend/venv.bak/
+
+# Variables de entorno
+backend/.env
+backend/.env.*
+
+# Testing / coverage
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+backend/.coverage
+backend/htmlcov/
+
+# Logs
+backend/*.log
+backend/pip-log.txt
+backend/pip-delete-this-directory.txt
+
+# Django
+backend/local_settings.py
+backend/db.sqlite3
+backend/db.sqlite3-journal
+backend/media/
+backend/static/
+backend/staticfiles/
